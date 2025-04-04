@@ -15,5 +15,9 @@ Currently, two official plugins are available:
 - [x] Join Waitlist ko remove
 - [x] Hero Pe date change karni hai. Kaledioscope ki jagah "Humanity Reimagined", TEDx hero me live aur add karna hai
 - [x] Sponsors ko comment karna hai
-- [ ] About page me Content Change
+- [x] About page me Content Change
 - [x] Remove Number from Why Part matters card
+
+### All the above tasks have been done.
+
+## Yayyyyy!
