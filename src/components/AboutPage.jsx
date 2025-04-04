@@ -11,8 +11,8 @@ function AboutPage() {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-red-600 mb-4">
-            What is TEDx?
+          <h1 className="text-4xl md:text-5xl font-bold  mb-4">
+            What is <span className="text-red-600">TEDx</span>Live?
           </h1>
           <div className="w-24 h-1 bg-red-600 mx-auto"></div>
         </div>
