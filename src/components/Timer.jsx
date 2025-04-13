@@ -56,7 +56,7 @@ function CountdownTimer({ targetDate }) {
 
 function Timer() {
   // change the date
-  const targetDate = new Date("2025-04-13T11:59:59"); // Set your target date here
+  const targetDate = new Date("2025-04-13T14:30:00"); // Set your target date here
 
 
   return (
