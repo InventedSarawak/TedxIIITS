@@ -53,19 +53,15 @@ function StartingBanner() {
                 <h1 className="text-6xl md:text-8xl font-bold text-white mb-4 tracking-tight">
                     <span className="text-red-600">TEDx</span>IIIT Sri City
                 </h1>
-                <h1 className=" text-6xl md:text-8xl font-bold text-white mb-4 tracking-tight animate-pulse-red">
-                    {' '}
-                    Live
-                </h1>
 
                 {/* Subtitle with typing effect */}
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in">
-                    Humanity Reimagined
+                    Kaleidoscope of Humanity
                 </p>
 
                 {/* Date */}
                 <div className="text-lg md:text-xl text-gray-400 tracking-widest animate-fade-in-delay">
-                    13th April 2025
+                    19th January 2025
                 </div>
             </div>
 

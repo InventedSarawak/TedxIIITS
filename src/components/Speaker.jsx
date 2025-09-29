@@ -8,7 +8,7 @@ function SpeakerCard({ image, name, description }) {
         <div className="relative mb-6 overflow-hidden rounded-xl aspect-[4/3] transform transition-transform duration-500">
           <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-purple-500/20 mix-blend-overlay group-hover:opacity-75 transition-opacity duration-300"></div>
           <img
-            src={image}
+            src={`/speakers/${image}`}
             alt={name}
             className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
           />
@@ -35,99 +35,68 @@ function Speaker() {
     setIsVisible(true);
   }, []);
 
+
   const speakers = [
     {
-      name: "Sam Altman",
-      description: "Sam Altman is the CEO of OpenAI, developer of influential AI models like ChatGPT, DALL·E, Sora and o1. OpenAI’s mission is to ensure that all of humanity benefits from artificial general intelligence, or AGI — which they define as “highly autonomous systems that outperform humans at most economically valuable work.” Before his time at OpenAI, Altman was president of the startup accelerator Y Combinator.",
-      image: "//pi.tedcdn.com/r/s3.amazonaws.com/ems-photos/event-speaker-photos/production/original_photos/f787824115f9004db98566be725024a7.jpg?quality=100&width=400",
-      alt: "Sam Altman",
-    }, 
+      name: "Thulasimathi Murugesan  ",
+      description:
+        "A badminton paralympian from Tamil Nadu. She represented India at the Paris 2024 Paralympics and 2022 Asian Para Games. She won three medals in para badminton competitions, SL3-SU5 and SU5 classes. She made history as the first Indian woman shuttler to win a Paralympic silver medal, following a remarkable journey to the final in the SU5 category.",
+      image: "/thulasi.webp",
+      alt: "Thulasimathi Murugesan",
+    },
     {
-      name: "Yoshua Bengio",
-      description: "Pioneering computer scientist and Turing Award winner Yoshua Bengio is at the forefront of deep learning research and AI development. In addition to being a professor at Université de Montréal, he is the founder and scientific director of the Mila - Quebec AI Institute, and devotes himself to reducing the potential risks to humanity of superhuman AI. He is the computer scientist with the highest h-index citation metric and number of citations, and he is ranked third among all disciplines by scientific impact, according to the Stanford bibliometric study.",
-      image: "//pi.tedcdn.com/r/s3.amazonaws.com/ems-photos/event-speaker-photos/production/original_photos/fbc543a41503f69b817a7b77846b1ea4.jpg?quality=100&width=400",
-      alt: "Yoshua Bengio",
-    }, 
-    {
-      name: "Hany Farid",
-      description: "A professor at the University of California, Berkeley, Hany Farid specializes in digital media forensics. In an era of pervasive and ever more convincing deepfakes, his work focuses on the evolution of photographic forensics. He is also the cofounder and chief science officer at GetReal Labs, which offers real-time authentication and forensic analysis of audio, video and images.",
-      image: "//pi.tedcdn.com/r/s3.amazonaws.com/ems-photos/event-speaker-photos/production/original_photos/b49e2764a41b5371267efcdaa099c767.jpg?quality=100&width=400",
-      alt: "Hany Farid",
-    }, 
-    {
-      name: "Eric Schmidt",
-      description: "Eric Schmidt is best known for his pivotal role in the growth and evolution of Google, where, as chairman and CEO, he oversaw the company's transformation from a small startup into one of the world's most influential companies from 2001 to 2011. He currently serves as executive chairman and CEO of Relativity Space and is the author of multiple bestselling books, the most recent being Genesis: Artificial Intelligence, Hope, and the Human Spirit, co-written with Henry Kissinger and Craig Mundie.",
-      image: "//pi.tedcdn.com/r/s3.amazonaws.com/ems-photos/event-speaker-photos/production/original_photos/3b53595a6b90d04acb233b5622fa213f.jpg?quality=100&width=400",
-      alt: "Eric Schmidt",
-    }, 
-    {
-      name: "Amaury Guichon",
-      description: `Chef Amaury Guichon bends chocolate to his will. After training at some of Europe’s top culinary schools and patisseries, he began posting his confections on social media, becoming the world’s most-followed pastry chef. In 2019, Guichon co-founded the Pastry Academy by Amaury Guichon in Las Vegas and in 2021, he hosted the Netflix reality series, School of Chocolate, a competition resulting in incredible chocolate sculptures. He is the author of the dessert cookbook The Art of Flavor and in 2023 was named "The World’s Most Creative Pastry Chef" by La Liste.`,
-      image: "//pi.tedcdn.com/r/s3.amazonaws.com/ems-photos/event-speaker-photos/production/original_photos/36ac39b40282d69811d97022b752bb21.jpg?quality=100&width=400",
-      alt: "Amaury Guichon",
-    }, 
-    {
-      name: "Matan Cohen Grumi",
-      description: "Matan Cohen Grumi is the founding creative director at PIKA, a social media-first AI video platform that seeks to make video creation more fun and accessible. Drawing on decades of experience touring with a successful metal band and directing TV ads for global brands such as P&G, Adidas and Nestlé, he blends high-quality production chops with a well-honed sense of what moves people. He sees AI as a playground that helps humans bring their ideas to life in ways that feel effortless and exciting.",
-      image: "//pi.tedcdn.com/r/s3.amazonaws.com/ems-photos/event-speaker-photos/production/original_photos/0d38a66e60fa62cd7c719f89cc139327.jpg?quality=100&width=400",
-      alt: "Matan Cohen Grumi",
-    }, 
-    {
-      name: "Oz Pearlman",
-      description: "After a stint on Wall Street, Oz Pearlman decided to pursue his childhood dream, and in the process redefined the very nature of the magic show. He wows audiences around the world with his mind-reading abilities and unique blend of charisma, charm and quick wit. His TV appearances include the Emmy-winning special Oz Knows and a Super Bowl pre-game performance. In 2022, he broke the world record for most miles run around Central Park in a single day (116 miles) to raise money for Ukrainian children.",
-      image: "//pi.tedcdn.com/r/s3.amazonaws.com/ems-photos/event-speaker-photos/production/original_photos/7635e75e002c4dbf7b6e1adae34fa82d.jpg?quality=100&width=400",
-      alt: "Oz Pearlman",
-    }, 
-    {
-      name: "Jackie Lebo",
-      description: "A multi-hyphenate creative herself, Jackie Lebo is founder of the Nomadic Arts Festival, which brings together artists from Nairobi and northern Kenya to showcase work inspired by the region, its topography and the peoples within it. Her film, photography and music explore the nexus between traditional societies and modernity. She also runs Content House Kenya, a collaborative artists’ collective that shares ownership and revenue with the communities where the work is rooted. At TED2025, Lebo will perform alongside Elizabeth Korikel and Eddie Grey.",
-      image: "//pi.tedcdn.com/r/s3.amazonaws.com/ems-photos/event-speaker-photos/production/original_photos/905d67c801420bb27811bd5d035a0295.jpg?quality=100&width=400",
-      alt: "Jackie Lebo",
-    }, 
-    {
-      name: "Steven Pinker",
-      description: "Steven Pinker is a cognitive scientist who is interested in all aspects of language, the mind and human nature. As a professor of psychology at Harvard (previously Stanford and MIT), he conducts research in visual cognition, psycholinguistics and social relations. His prize-winning work includes the first comprehensive theory of language acquisition in children and documenting historical declines in violence as a lens on the human condition. His books include The Language Instinct, How the Mind Works, The Better Angels of Our Nature and Enlightenment Now. His thirteenth book, to be published in September, is When Everyone Knows that Everyone Knows: Common Knowledge and the Mysteries of Money, Power, and Everyday Life.",
-      image: "//pi.tedcdn.com/r/s3.amazonaws.com/ems-photos/event-speaker-photos/production/original_photos/9a7035141f261b37e5f61aba8fe77a48.jpg?quality=100&width=400",
-      alt: "Steven Pinker",
-    }, 
-    {
-      name: "Richard Dawkins",
-      description: `Legendary evolutionary biologist Richard Dawkins has revolutionized our understanding of genetics and the role of science and religion in society. He is the author of 18 books (including The Selfish Gene, The God Delusion and, most recently, The Genetic Book of the Dead) and also hosts The Poetry of Reality podcast. His work inspires passionate discourse on humanity's biggest existential questions, including the spread of ideas (the concept of "memes" started with him). He is a staunch advocate for scientific literacy and critical thinking.`,
-      image: "//pi.tedcdn.com/r/s3.amazonaws.com/ems-photos/event-speaker-photos/production/original_photos/d1cdaf293503687a88550fa71eeacc97.jpg?quality=100&width=400",
-      alt: "Richard Dawkins",
-    }, 
-    {
-      name: "Deja Foxx",
-      description: "A trailblazing activist and content creator, Deja Foxx is the founder of GenZ Girl Gang, a digital collective redefining sisterhood for the digital age. Her work is informed by her personal journey: overcoming homelessness as a teen and being the first in her family to attend college. At 19, she became one of history's youngest presidential campaign strategists, advising Kamala Harris and speaking on youth issues at the 2024 Democratic National Convention. She serves on the board of directors of the Sustainable Media Center.",
-      image: "//pi.tedcdn.com/r/s3.amazonaws.com/ems-photos/event-speaker-photos/production/original_photos/6b2a679102200697fdb859f53d455dbd.jpg?quality=100&width=400",
-      alt: "Deja Foxx",
-    }, 
-    {
-      name: "Claudia Passos Ferreira",
-      description: "Claudia Passos Ferreira is a philosopher, bioethicist and clinical psychologist exploring the origins of consciousness and morality. With dual PhDs in philosophy and public health, she investigates how theories of consciousness shape our understanding of infants, animals and artificial intelligence — and how they inform questions of ethics.",
-      image: "//pi.tedcdn.com/r/s3.amazonaws.com/ems-photos/event-speaker-photos/production/original_photos/9dfc3bac2f62131d8cff5163411a854d.jpg?quality=100&width=400",
-      alt: "Claudia Passos Ferreira",
-    }, 
-    {
-      name: "Jeffrey T. Reed",
-      description: "Linguist and software engineer Jeffrey T. Reed is a research affiliate for the Cry Wolf Project, a bioacoustics study of wolf communication in the Greater Yellowstone ecosystem. After earning a PhD involving dead languages and computational linguistics, he spent three decades in tech before rekindling his childhood passion for animal communication. Today, he leverages AI to decode how wolves and other wildlife use sound.",
-      image: "//pi.tedcdn.com/r/s3.amazonaws.com/ems-photos/event-speaker-photos/production/original_photos/51b38f14325d40f3baa046826bc38c40.jpg?quality=100&width=400",
-      alt: "Jeffrey T. Reed",
-    }, 
-    {
-      name: "Ariel Ekblaw",
-      description: "Space architect Ariel Ekblaw is helping to shape humanity's interplanetary future. In her vision, space stations circle the Earth, Moon and Mars, furnished with self-assembling habitats, and everyone has access to low Earth orbit. Her work and investments as founder and CEO of the Aurelia Institute and general partner of the Aurelia Foundry Fund reflect her belief that we should scale up life in space. She was the founding director of the MIT Space Exploration Initiative and is author/editor of Into the Anthropocosmos: A Whole Space Catalog from the MIT Space Exploration Initiative.",
-      image: "//pi.tedcdn.com/r/s3.amazonaws.com/ems-photos/event-speaker-photos/production/original_photos/40908913bf09b30363144f0d573bc6e4.jpg?quality=100&width=400",
-      alt: "Ariel Ekblaw",
-    }, 
-    {
-      name: "John Hope Bryant",
-      description: "John Hope Bryant is the founder, chairman and CEO of Operation HOPE, the nation’s largest financial literacy and economic empowerment nonprofit. Under his leadership, Operation HOPE has directed more than $4.2 billion into marginalized communities, establishing hundreds of financial empowerment centers nationwide. A best-selling author of six books, Bryant has advised US presidents George W. Bush and Barack Obama and worked alongside Fortune 500 CEOs to promote financial literacy.",
-      image: "//pi.tedcdn.com/r/s3.amazonaws.com/ems-photos/event-speaker-photos/production/original_photos/956e3b3e2b7a78a396983c5636432460.jpg?quality=100&width=400",
-      alt: "John Hope Bryant",
-    }, 
+      name: "Malvika Jey",
+      description:
+        "An artist known for her exploration of surrealism and abstract art. She began her artistic journey since she was 4 years old. Over the years, she has experimented with various mediums and styles to develop her unique signature, focusing on emotional expression through color and form.",
+      image: "/malvikajey.png",
+      alt: "Malvika Jey",
+    },
 
-  ]
+    {
+      name: "Dr. Abhinanda Sarkar",
+      description:
+        "Dr. Sarkar is a certified Master Black Belt in Lean Six Sigma and Design for Six Sigma. He has been visiting faculty at Stanford and ISI and continues to teach at IIM-Bangalore and IISc. His publications, patents & technical leadership have been in applying probabilistic models, statistical analysis, and machine learning.",
+      image: "/abhinandasarkar.jpeg",
+      alt: "Dr. Abhinanda Sarkar",
+    },
+    {
+      name: "Ramalingam Natarajan",
+      description:
+        "The co-founder of Volunteer for India (VFI), an organization aimed at fostering volunteerism to address social issues across the country. His career trajectory is notable for its blend of engineering, education, and social innovation. Initially trained as an aerospace engineer, he worked on projects for Airbus and Boeing before shifting to impactful community work.",
+      image: "/ramalingam.jpg",
+      alt: "Ramalingam Natarajan",
+    },
+    {
+      name: "Swarnalatha",
+      description:
+        "Swarnalatha Y is a visionary leader in innovation and strategic growth. With a strong background in leadership and problem-solving, she transforms challenges into opportunities.As communication coach she is widely acknowledged in the industry for her human-centered engaging style and focus on authentic story-telling, powerful ideas, compelling presentations and effective public speaking and communication.",
+      image: "/swarnalatha.png",
+      alt: "Swarnalatha",
+    },
+
+    {
+      name: "Sunil Raveendran",
+      description:
+        "A visionary software architect and technology thought leader who believes in harnessing digital innovation for societal good.Featured in Forbes 50 Blockchain Teams, Sunil brings over two decades of enterprise software architecture experience. As the President of Kerala Chapter of India Blockchain Forum and a board of studies member at Digital University Kerala, he's actively shaping the future of digital education and technology adoption.",
+      image: "/sunilraveendran.jpg",
+      alt: "Sunil Raveendran",
+    },
+    {
+      name: "Karuppannan Jaishankar",
+      description:
+        'Karuppannan Jaishankar is an Indian criminologist. He is the Founder and Principal Director and Professor of Criminology and Justice Sciences at the International Institute of Justice & Police Sciences.He is the founding father of cyber criminology,an academic sub-discipline of criminology and the proponent of the "Space Transition Theory of Cyber Crimes" which holds that people behave differently online than they do in real life.',
+      image: "/jaishankar.jpg",
+      alt: "Karuppannan Jaishankar",
+    },
+    {
+      name: "Anil Kumar",
+      description:
+        "A leader in digital transformation, he blends expertise in AI, cloud, and innovation to deliver groundbreaking solutions.With 400+ successful deals and a passion for mentoring future leaders, his journey is truly inspiring. Anil Kumar's work continues to shape the future of technology across industries.",
+      image: "/anilkumar.jpg",
+      alt: "Anil Kumar",
+    },
+    // Add more speaker objects as needed
+  ];
 
   return (
     <section className="py-24 pt-32 relative overflow-hidden">

@@ -22,7 +22,7 @@ function Booking() {
         <div className="w-full md:w-1/2 space-y-8">
           <div className="backdrop-blur-lg bg-black/30 rounded-xl p-8 border border-gray-700 shadow-2xl">
             <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-6">
-              Humanity Reimagined
+              Kaleidoscope of Humanity
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed italic">
 AI is accelerating. Boundaries are shifting. What it means to be human is being redefined. The answer isn’t to resist but to reimagine—embracing curiosity, imagination, and connection in ways no machine can. The future is uncertain, but one truth remains: <span className="text-red-600 tracking-tight font-bold ">it will be what we dare to create.</span>

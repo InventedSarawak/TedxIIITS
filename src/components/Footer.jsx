@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
 
         <p className="text-gray-400 text-xs mb-4">
-          © 2024 <span className="text-red-600">TEDxIIIT Sri City</span>. THIS
+          © 2025 <span className="text-red-600">TEDxIIIT Sri City</span>. THIS
           INDEPENDENT TEDx EVENT IS OPERATED UNDER LICENCE FROM TED |
           <a
             href="https://www.ted.com/participate/organize-a-local-tedx-event/before-you-start/tedx-rules "

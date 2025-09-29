@@ -24,7 +24,7 @@ function Header() {
                 to="/"
                 className="text-2xl font-bold text-red-600 hover:text-red-600"
               >
-                TEDx<span className="text-white">IIIT Sri City</span><span className="hover:animate-none animate-pulse-red"> Live</span>
+                TEDx<span className="text-white">IIIT Sri City</span>
               </Link>
             </div>
 
